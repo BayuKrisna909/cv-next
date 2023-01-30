@@ -547,20 +547,12 @@ video {
   }
 }
 
-.fixed {
-  position: fixed;
-}
-
 .top-0 {
   top: 0px;
 }
 
 .z-20 {
   z-index: 20;
-}
-
-.float-right {
-  float: right;
 }
 
 .m-3 {
@@ -574,14 +566,6 @@ video {
 
 .ml-auto {
   margin-left: auto;
-}
-
-.mt-0 {
-  margin-top: 0px;
-}
-
-.mr-auto {
-  margin-right: auto;
 }
 
 .flex {
