@@ -70,7 +70,7 @@ export default function Home() {
               <div className="flex justify-center top-0">
                 <p className="font-semibold text-4xl justify-center m-3">
                   {" "}
-                  Junior Web Design
+                  Wellcome to my CV
                 </p>
               </div>
               <br></br>
