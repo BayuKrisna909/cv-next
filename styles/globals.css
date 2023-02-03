@@ -547,8 +547,20 @@ video {
   }
 }
 
+.relative {
+  position: relative;
+}
+
 .top-0 {
   top: 0px;
+}
+
+.left-0 {
+  left: 0px;
+}
+
+.right-0 {
+  right: 0px;
 }
 
 .z-20 {
@@ -564,29 +576,14 @@ video {
   margin-right: 1rem;
 }
 
-.my-40 {
-  margin-top: 10rem;
-  margin-bottom: 10rem;
-}
-
-.my-72 {
-  margin-top: 18rem;
-  margin-bottom: 18rem;
-}
-
 .my-80 {
   margin-top: 20rem;
   margin-bottom: 20rem;
 }
 
-.my-64 {
-  margin-top: 16rem;
-  margin-bottom: 16rem;
-}
-
-.my-60 {
-  margin-top: 15rem;
-  margin-bottom: 15rem;
+.my-72 {
+  margin-top: 18rem;
+  margin-bottom: 18rem;
 }
 
 .ml-auto {
@@ -601,6 +598,10 @@ video {
   display: grid;
 }
 
+.hidden {
+  display: none;
+}
+
 .h-screen {
   height: 100vh;
 }
@@ -609,12 +610,12 @@ video {
   height: 100%;
 }
 
-.h-16 {
-  height: 4rem;
-}
-
 .h-auto {
   height: auto;
+}
+
+.h-16 {
+  height: 4rem;
 }
 
 .w-1\/2 {
@@ -671,6 +672,11 @@ video {
   border-color: rgb(163 163 163 / var(--tw-border-opacity));
 }
 
+.bg-gray-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(75 85 99 / var(--tw-bg-opacity));
+}
+
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -679,16 +685,6 @@ video {
 .bg-neutral-200 {
   --tw-bg-opacity: 1;
   background-color: rgb(229 229 229 / var(--tw-bg-opacity));
-}
-
-.bg-gray-600 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(75 85 99 / var(--tw-bg-opacity));
-}
-
-.bg-teal-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(20 184 166 / var(--tw-bg-opacity));
 }
 
 .object-cover {
@@ -752,10 +748,59 @@ video {
 
 *{
   scroll-behavior: smooth;
+  scroll-padding-top:6rem ;
+}
+
+[data-slide]:not(.no-slide) {
+  opacity: 0;
+  transition: all 0.3s ease, transform 1s ease, opacity 1s ease;
+}
+
+[data-slide="left"] {
+  transform: translateX(4rem);
+}
+
+[data-slide="right"] {
+  transform: translateX(-4rem);
+}
+
+[data-slide="up"] {
+  transform: translateY(4rem);
+}
+
+[data-slide="down"] {
+  transform: translateY(-4rem);
+}
+
+[data-slide]:not(.no-slide).i\:open {
+  opacity: 1;
+  transform: translate(0, 0);
 }
 
 @media (min-width: 768px) {
   .md\:items-center {
     align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .phone\:fixed {
+    position: fixed;
+  }
+
+  .phone\:block {
+    display: block;
+  }
+
+  .phone\:hidden {
+    display: none;
+  }
+
+  .phone\:w-full {
+    width: 100%;
+  }
+
+  .phone\:flex-col {
+    flex-direction: column;
   }
 }

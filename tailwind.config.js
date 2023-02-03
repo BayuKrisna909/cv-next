@@ -4,7 +4,16 @@ module.exports = {
     "./pages/**/*.jsx"
   ],
   theme: {
-    extend: {},
+    extend: {
+      screens: {
+        "phone-lg": {
+            max: "900px",
+        },
+        phone: {
+            max: "768px",
+        },
+      },
+    },
   },
   plugins: [],
 }

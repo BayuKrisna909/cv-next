@@ -2,10 +2,13 @@ import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "@next/font/google";
 import styles from "@/styles/Home.module.css";
+import useAnimateSlide from "@/lib/useAnimateSlide";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  useAnimateSlide();
+
   return (
     <>
       <Head>
@@ -15,9 +18,18 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="overflow-hidden">
-        <div className="flex justify-between h-screen items-start">
-          <div className="left__side w-1/2 h-full overflow-y-auto">
-            <nav className="p-5 bg-white shadows flex justify-between items-center ">
+        <div className="phone:flex-col flex justify-between h-screen items-start">
+          <div className="left__side relative w-1/2 phone:w-full h-full overflow-y-auto">
+            <div className="right__side phone:w-full phone:block hidden w-1/2 h-full overflow-hidden">
+              <div className="flex justify-center items-center h-full ml-auto bg-gray-600">
+                <img
+                  className="w-1/2 h-auto object-cover"
+                  src="WhatsApp Image 2023-02-02 at 13.35.07.jpg"
+                ></img>
+                   
+              </div>
+            </div>
+            <nav className="p-5 bg-white phone:fixed top-0 left-0 right-0 shadows flex justify-between items-center ">
               <div className="top-0">
                 <span className="font-bold text-2x1 font-[Poppins] cursor-pointer">
                   CV
@@ -60,101 +72,98 @@ export default function Home() {
             </nav>
             <br></br>
             <br></br>
-            <nav className="my-60">
-              <div className="flex justify-center top-0">
-                <p className="font-bold text-7xl justify-center m-3">
-                  Bayu Krisna
-                </p>
-                <br></br>
-              </div>
-              <div className="flex justify-center top-0">
-                <p className="font-semibold text-4xl justify-center m-3">
-                  {" "}
-                  Wellcome to my CV
-                </p>
-              </div>
+            <div className="flex justify-center top-0">
+              <p className="font-bold text-7xl justify-center m-3">
+                Bayu Krisna
+              </p>
               <br></br>
-              <br></br>
-              <br></br>
-              <br></br>
-              <br></br>
-              <br></br>
-              <div className="my-72">
-                <p id="Tentang saya" className="text-4xl mx-4">
-                  Tentang saya _________________
-                </p>
-                <br></br>
-                <p className="mx-4">
-                  Selamat Pagi Bapak/Ibu Sebelum memulainya saya mengucapkan
-                  terimakasih atas waktu yang diberikan,saat ini saya akan
-                  memperkenalkan diri terlebih dahulu, nama saya Ida Bagus Bayu
-                  Krisna Wibawa , teman-teman saya biasa memanggil saya dengan
-                  sebutan Bayu.Saya juga memiliki hobi bermain game dan membaca.
-                  ,dan dengan saya mengucapkan terimakasih kepada Bapak/Ibu
-                  telah meluangkan waktu untuk membaca tentang diri saya sendiri
-                  dan sekian selamat pagi.
-                </p>
-              </div>
-              <br></br>
-              <br></br>
-              <div className="my-72">
-                <p id="Pendidikan" className="text-4xl mx-4">
-                  Pendidikan _________________
-                </p>
-                <br></br>
-                <p className="mx-4">
-                  <span className="font-bold">*Sekolah Dasar</span> : SDN 3
-                  Pedungan
-                </p>
-                <br></br>
-                <p className="mx-4">
-                  <span className="font-bold">*SMP</span> : SMP Tunas Harapan
-                  Bangsa
-                </p>
-                <br></br>
-                <p className="mx-4">
-                  <span className="font-bold">*SMK</span> : SMKTI Bali Global
-                  Denpasar
-                </p>
-                <br></br>
-              </div>
-              <div className="my-72">
-                <p id="Keahlian" className="text-4xl mx-4">
-                  Keahlian _________________
-                </p>
-                <br></br>
-                <p className="font-semibold mx-4">*HTML</p>
-                <br></br>
-                <p className="font-semibold mx-4">*CSS</p>
-                <br></br>
-                <p className="font-semibold mx-4">*Bahasa Inggris</p>
-                <br></br>
-              </div>
-              <p id="Contact" className="text-4xl mx-4">
-                Contact _________________
+            </div>
+            <div className="flex justify-center top-0">
+              <p className="font-semibold text-4xl justify-center m-3">
+                {" "}
+                Wellcome to my CV
+              </p>
+            </div>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <div data-slide="up" className="my-80">
+              <p id="Tentang saya" className="text-4xl mx-4">
+                Tentang saya _________________
               </p>
               <br></br>
               <p className="mx-4">
-                <span className="font-bold">*Email: </span>
-                <a
-                  className="text-blue-600"
-                  href="mailto:Bayukrw8989@gmail.com"
-                >
-                  Bayukrw8989@gmail.com
-                </a>
+                Selamat Pagi Bapak/Ibu Sebelum memulainya saya mengucapkan
+                terimakasih atas waktu yang diberikan,saat ini saya akan
+                memperkenalkan diri terlebih dahulu, nama saya Ida Bagus Bayu
+                Krisna Wibawa , teman-teman saya biasa memanggil saya dengan
+                sebutan Bayu.Saya juga memiliki hobi bermain game dan membaca.
+                ,dan dengan saya mengucapkan terimakasih kepada Bapak/Ibu telah
+                meluangkan waktu untuk membaca tentang diri saya sendiri dan
+                sekian selamat pagi.
+              </p>
+            </div>
+            <br></br>
+            <br></br>
+            <div data-slide="up" className="my-72">
+              <p id="Pendidikan" className="text-4xl mx-4">
+                Pendidikan _________________
               </p>
               <br></br>
-              <div>
-                <p className="mx-4">
-                  <span className="font-bold">*No HP :</span>0813-3755-8186
-                </p>
-                <br></br>
-                <p className="mx-4">
-                  <span className="font-bold">*Alamat :</span>
-                  Jln.taman Pancing timur ,GG Kubu II no 10XX
-                </p>
-              </div>
-            </nav>
+              <p className="mx-4">
+                <span className="font-bold">*Sekolah Dasar</span> : SDN 3
+                Pedungan
+              </p>
+              <br></br>
+              <p className="mx-4">
+                <span className="font-bold">*SMP</span> : SMP Tunas Harapan
+                Bangsa
+              </p>
+              <br></br>
+              <p className="mx-4">
+                <span className="font-bold">*SMK</span> : SMKTI Bali Global
+                Denpasar
+              </p>
+              <br></br>
+            </div>
+            <div data-slide="up" className="my-72">
+              <p id="Keahlian" className="text-4xl mx-4">
+                Keahlian _________________
+              </p>
+              <br></br>
+              <p className="font-semibold mx-4">*HTML</p>
+              <br></br>
+              <p className="font-semibold mx-4">*CSS</p>
+              <br></br>
+              <p className="font-semibold mx-4">*Bahasa Inggris</p>
+              <br></br>
+            </div>
+            <p id="Contact" className="text-4xl mx-4">
+              Contact _________________
+            </p>
+            <br></br>
+            <p className="mx-4">
+              <span data-slide="up" className="font-bold">
+                *Email:{" "}
+              </span>
+              <a className="text-blue-600" href="mailto:Bayukrw8989@gmail.com">
+                Bayukrw8989@gmail.com
+              </a>
+            </p>
+            <br></br>
+            <div data-slide="up">
+              <p className="mx-4">
+                <span className="font-bold">*No HP :</span>0813-3755-8186
+              </p>
+              <br></br>
+              <p className="mx-4">
+                <span className="font-bold">*Alamat :</span>
+                Jln.taman Pancing timur ,GG Kubu II no 10XX
+              </p>
+            </div>
             <footer
               className="h-16 md-m:text-white shadow-md bg-neutral-200 border-t z-20 border border-neutral-400 grid place-items-center"
               id="footer"
@@ -165,7 +174,7 @@ export default function Home() {
                      
             </footer>
           </div>
-          <div className="right__side w-1/2 h-full overflow-hidden">
+          <div className="right__side phone:w-full phone:hidden w-1/2 h-full overflow-hidden">
             <div className="flex justify-center items-center h-full ml-auto bg-gray-600">
               <img
                 className="w-1/2 h-auto object-cover"
