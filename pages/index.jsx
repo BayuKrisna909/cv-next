@@ -60,7 +60,7 @@ export default function Home() {
             </nav>
             <br></br>
             <br></br>
-            <nav className="">
+            <nav className="my-60">
               <div className="flex justify-center top-0">
                 <p className="font-bold text-7xl justify-center m-3">
                   Bayu Krisna
@@ -79,7 +79,7 @@ export default function Home() {
               <br></br>
               <br></br>
               <br></br>
-              <div>
+              <div className="my-72">
                 <p id="Tentang saya" className="text-4xl mx-4">
                   Tentang saya _________________
                 </p>
@@ -97,7 +97,7 @@ export default function Home() {
               </div>
               <br></br>
               <br></br>
-              <div>
+              <div className="my-72">
                 <p id="Pendidikan" className="text-4xl mx-4">
                   Pendidikan _________________
                 </p>
@@ -118,7 +118,7 @@ export default function Home() {
                 </p>
                 <br></br>
               </div>
-              <div>
+              <div className="my-72">
                 <p id="Keahlian" className="text-4xl mx-4">
                   Keahlian _________________
                 </p>
